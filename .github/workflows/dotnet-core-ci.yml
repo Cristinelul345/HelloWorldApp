@@ -3,14 +3,14 @@ name: .NET Core CI
 on:
   push:
     branches:
-      - main  # adjust this to your main branch name if different
+      - main  # or your main branch name
   pull_request:
     branches:
-      - main  # adjust this to your main branch name if different
+      - main  # or your main branch name
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Specify Windows runner
 
     steps:
       - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.x'  # adjust to the latest version that supports your target framework
+          dotnet-version: '6.x'  # adjust to the latest version that supports .NET 8.0
 
       - name: Restore dependencies
         run: dotnet restore
