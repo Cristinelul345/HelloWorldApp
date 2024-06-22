@@ -16,10 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK
+      - name: Install .NET SDK
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.x'  # adjust to the latest version that supports .NET 8.0
+          dotnet-version: '6.0.x'  # Adjust to the latest version that supports .NET 8.0
+
+      - name: Set .NET SDK version
+        run: dotnet --list-sdks  # Verify SDK version installed
 
       - name: Restore dependencies
         run: dotnet restore
