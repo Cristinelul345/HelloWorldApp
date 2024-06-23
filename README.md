@@ -2,32 +2,6 @@
 
 This is a simple .NET Core application. The project demonstrates the structure of a basic .NET Core application along with a CI/CD pipeline using GitHub Actions.
 
-## Repository Structure
-
-/HelloWorldApp
-├── .github
-│ └── workflows
-│ └── dotnet-core-ci.yml
-├── src
-│ └── HelloWorldApp
-│ ├── Properties
-│ ├── Controllers
-│ ├── Models
-│ ├── Views
-│ ├── HelloWorldApp.csproj
-│ ├── Program.cs
-│ ├── appsettings.Development.json
-│ └── appsettings.json
-├── tests
-│ └── HelloWorldApp.Tests
-│ ├── HelloWorldApp.Tests.csproj
-│ └── SomeTestFile.cs
-├── docs
-│ └── some-doc.md
-├── .gitignore
-├── README.md
-└── HelloWorldApp.sln
-
 ## dotnet-core-ci.yml
 Steps:
 1.Checkout code: This step checks out the code from the repository.
